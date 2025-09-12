@@ -9,19 +9,19 @@ class Solution(object):
         :rtype: List[int]
         """
         #O(n*m)
-        num1Ind = {n:i for i,n in enumerate(nums1)}
-        a = len(nums1)
-        b = len(nums2)
-        res = [-1] * a
-        for i in range(b):
-            if nums2[i] not in num1Ind:
-                continue
-            for j in range(i + 1, b):
-                if nums2[j] > nums2[i]:
-                    ind = num1Ind[nums2[i]]
-                    res[ind] = nums2[j]
-                    break
-        return res
+        # num1Ind = {n:i for i,n in enumerate(nums1)}
+        # a = len(nums1)
+        # b = len(nums2)
+        # res = [-1] * a
+        # for i in range(b):
+        #     if nums2[i] not in num1Ind:
+        #         continue
+        #     for j in range(i + 1, b):
+        #         if nums2[j] > nums2[i]:
+        #             ind = num1Ind[nums2[i]]
+        #             res[ind] = nums2[j]
+        #             break
+        # return res
         
         # O(n + m)
         num1Ind = {n:i for i,n in enumerate(nums1)}
