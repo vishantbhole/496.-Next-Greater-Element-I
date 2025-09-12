@@ -22,3 +22,6 @@ class Solution(object):
                     res[ind] = nums2[j]
                     break
         return res
+        
+        # O(n + m)
+        num1Ind = {n:i for i,n in enumerate(nums1)}
