@@ -13,3 +13,12 @@ class Solution(object):
         a = len(nums1)
         b = len(nums2)
         res = [-1] * a
+        for i in range(b):
+            if nums2[i] not in num1Ind:
+                continue
+            for j in range(i + 1, b):
+                if nums2[j] > nums2[i]:
+                    ind = num1Ind[nums2[i]]
+                    res[ind] = nums2[j]
+                    break
+        return res
