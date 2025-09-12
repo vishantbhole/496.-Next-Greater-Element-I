@@ -37,3 +37,11 @@ class Solution(object):
                 stack.append(cur)
 
         return res
+
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    num1 = [4,1,2]
+    num2 = [1,3,4,2]
+    print("Output is : ", sol.nextGreaterElement(num1,num2))
